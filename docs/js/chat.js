@@ -61,7 +61,7 @@ document.getElementById("chat-text").addEventListener("input", () => {
       socket.emit("stopTyping");
       isTyping = false;
     }
-  }, 6000);
+  }, 3000);
 });
 
 document.getElementById("chat-form").addEventListener("submit", (e) => {
