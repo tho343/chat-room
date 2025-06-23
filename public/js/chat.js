@@ -4,7 +4,7 @@ const room = params.get("room");
 const roomName = document.createElement("h1");
 const typing = document.getElementById("typing-status");
 const typingUsers = new Set();
-const socket = io();
+const socket = io("https://chat-room-o78d.onrender.com");
 roomName.innerHTML = `Chat Room  ${room}`;
 let typingTimeOut;
 let isTyping = false;
