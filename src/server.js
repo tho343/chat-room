@@ -9,12 +9,25 @@ const express = require("express");
 const path = require("path");
 const socketio = require("socket.io");
 const http = require("http");
+const cors = require("cors");
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
+const io = socketio(server, {
+  cors: {
+    origin: "https://tho343.github.io",
+    methods: ["GET", "POST"],
+  },
+});
 //static file dir
 app.use(express.static(path.join(__dirname, "../public")));
+app.use(
+  cors({
+    origin: "https://tho343.github.io",
+    methods: ["GET", "POST"],
+  })
+);
+
 //run when clients connect
 io.on("connection", (socket) => {
   console.log("new websocker connection");
