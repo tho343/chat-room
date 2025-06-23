@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div id="chat-box-container">
+      <h1>Chat box</h1>
+      <form id="join-form">
+        <input id="name" required />
+        <br />
+        <label>Room</label>
+        <select id="room">
+          <option value="beginner">Beginner</option>
+          <option value="inter">Intermediate</option>
+          <option value="advance">Advanced</option>
+        </select>
+        <br />
+        <button>Join Chat</button>
+      </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
