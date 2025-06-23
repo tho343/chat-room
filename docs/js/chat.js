@@ -72,7 +72,7 @@ document.getElementById("chat-form").addEventListener("submit", (e) => {
 });
 document.getElementById("disconnectBtn").addEventListener("click", () => {
   socket.disconnect();
-  window.location.href = "index.html";
+  window.location.href = "/chat-room/index.html";
 });
 
 function updateTypingStatus() {
